@@ -8,6 +8,8 @@ const maleNames = ['Dario', 'Pilip', 'Adam', 'John', 'Tom', 'Niko'];
 
 const lastName = ['Whisky', 'Gin', 'Beer', 'Wine', 'Vodka', 'Tequila'];
 
+const mail = ['gmail.com', 'hotmail.com', 'yahoo.com'];
+
 const randChoice = (array) => {
     return array[Math.floor(Math.random() * array.length)];
 };
@@ -28,7 +30,9 @@ for (let i = 1; i < 20; i++) {
 
     person.lastName = randChoice(lastName);
 
-    person.age= Math.floor(Math.random() *(78 - 18 + 1)) + 18;
+    person.age= Math.floor(Math.random() *(78 - 18 +1)) + 18;
+
+    person.email=(person.name + '.' + person.lastName + '@' + randChoice(mail)).toLowerCase();
 
     people.push(person);
 }
